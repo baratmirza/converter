@@ -51,7 +51,6 @@ function cleanInput(inputField) {
     if (item[0] === '.') {
         item[0] = "0.";
     }
-
     for (let i = 0; i < item.length; i++) {
         if (item[i] === '.') {
             count++;
@@ -60,8 +59,6 @@ function cleanInput(inputField) {
             }
         }
     }
-
-   
     let joined = item.join('');
     if (joined.includes('.')) {
         let parts = joined.split('.');
@@ -70,8 +67,6 @@ function cleanInput(inputField) {
         }
         joined = parts.join('.');
     }
-
- 
     let newItems = joined.split('');
     if (newItems[0] == 0 && newItems[1] != ".") {
         for (let i = 1; i <= newItems.length; i++) {
